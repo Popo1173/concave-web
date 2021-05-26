@@ -1,3 +1,11 @@
+# sass install
+```npm install sass```
+
+https://nextjs.org/docs/basic-features/built-in-css-support#sass-support
+
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
