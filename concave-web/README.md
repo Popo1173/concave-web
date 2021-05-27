@@ -18,3 +18,7 @@ import 'modern-css-reset/dist/reset.min.css'
 
 ## バーガー
 [参考](https://qiita.com/kohei_abe/items/1dec093fc8ed41eee5a7)
+
+
+## memo
+_app.jsに全て共通で利用する物を入れる
