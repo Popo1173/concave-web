@@ -1,4 +1,6 @@
-# sass install
+
+
+# scss install
 ```
 npm install sass
 ```
@@ -13,3 +15,6 @@ _app.jsに、以下を追記
 ```
 import 'modern-css-reset/dist/reset.min.css' 
 ```
+
+## バーガー
+[参考](https://qiita.com/kohei_abe/items/1dec093fc8ed41eee5a7)
