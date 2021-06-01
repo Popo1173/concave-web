@@ -13,7 +13,7 @@ export default function Home() {
       </Head>
       <Header />
       <main>
-        <Image　src="/main_visual.png" alt="Picture of the author" width={1850} height={670} />
+        <Image className="mainVisual"　src="/main_visual.png" alt="Picture of the author" width={1850} height={670} />
         <h1></h1>
       </main>
 
