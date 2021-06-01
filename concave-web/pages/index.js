@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Header from '../components/Header'
+import Image from 'next/image'
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       </Head>
       <Header />
       <main>
+        <Image　src="/main_visual.png" alt="Picture of the author" width={1850} height={670} />
         <h1></h1>
       </main>
 
