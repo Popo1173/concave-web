@@ -25,11 +25,9 @@ import 'modern-css-reset/dist/reset.min.css'
 public 
 └ 画像.png  
 publicを省略できる. 
-````
+```
 <Image src="画像.png" alt="Picture of the author" width={1850} height={670} />
 ```
-
-
 
 ## memo
 _app.jsに全て共通で利用する物を入れる
