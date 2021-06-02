@@ -16,9 +16,30 @@ _app.jsに、以下を追記
 import 'modern-css-reset/dist/reset.min.css' 
 ```
 
-## CSS 書き方
-###globals.css
-ファイルはnext.jsのインストール時から存在するpagesディレクトリの下にある_app.jsファイルの中でimportが行われています。  
+# CSS 書き方
+
+## CSS in JS
+
+### styled-jsx
+Next.jsではデフォルトでstyled-jsxがデフォルトでロードされていて、no configで実装が開始できます。  
+```
+export default () => (
+  <div>
+    Welcome to next.js!
+    <style jsx>{`
+      div {
+        background: red;
+      }
+    `}</style>
+  </div>
+);
+```
+
+
+
+
+
+
 ```
 .heading {
   color: green;
@@ -44,6 +65,15 @@ mport styles from “../styles/Home.module.css”;
         return ( <div> <h1 className={styles.heading}>Hello Next.js</h1> </div> ); 
         }
 ```
+## globals.scss
+next.jsのインストール時から存在する、pagesディレクトリの下にある「_app.js」ファイルの中でimportが行われています。  
+[_app.js]
+```
+//これでgloabal.scss読み込み
+//変数とか使えない。。。
+import '../styles/globals.s
+````
+
 
 ### 変数をまとめた.scssを作り各modul.scssで読み込む
 variables.scss作る  
