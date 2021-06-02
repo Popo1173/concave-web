@@ -35,17 +35,12 @@ export default () => (
 );
 ```
 
-
-
-
-
-
+### component内にスタイルを描く
 ```
 .heading {
   color: green;
 }
-```
-```
+
 export default function Home() {
   return (
     <div>
@@ -54,17 +49,17 @@ export default function Home() {
   );
 }
 ```
+
 ### module.cssファイルによりCSSの適用   
-XXXX.module.cssファイルはコンポーネントでimportを行うことがファイルです。 
+XXXX.module.cssファイルはコンポーネントでimportを行う。  
 ```
-import styles from "../styles/Home.module.css";
-```
-```
-mport styles from “../styles/Home.module.css”; 
+import styles from “../styles/Home.module.css”; 
+
     export default function Home() { 
         return ( <div> <h1 className={styles.heading}>Hello Next.js</h1> </div> ); 
         }
 ```
+
 ## globals.scss
 next.jsのインストール時から存在する、pagesディレクトリの下にある「_app.js」ファイルの中でimportが行われています。  
 [_app.js]
@@ -73,7 +68,6 @@ next.jsのインストール時から存在する、pagesディレクトリの�
 //変数とか使えない。。。
 import '../styles/globals.s
 ````
-
 
 ### 変数をまとめた.scssを作り各modul.scssで読み込む
 variables.scss作る  
