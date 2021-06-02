@@ -34,7 +34,7 @@ export default function Home() {
 }
 ```
 ### module.cssファイルによりCSSの適用   
-XXXX.module.cssファイルはコンポーネントでimportを行うことがファイルです。しかし、importの方法が異なります。  
+XXXX.module.cssファイルはコンポーネントでimportを行うことがファイルです。 
 ```
 import styles from "../styles/Home.module.css";
 ```
@@ -44,6 +44,119 @@ mport styles from “../styles/Home.module.css”;
         return ( <div> <h1 className={styles.heading}>Hello Next.js</h1> </div> ); 
         }
 ```
+
+### 変数をまとめた.scssを作り各modul.scssで読み込む
+variables.scss作る  
+mixinで各変数を定義  
+```
+[variables.scss]
+$pc: 1024px; // PC
+$sp: 768px;  // スマホ
+
+$breakpoints: (
+  'pc': 'screen and (max-width: #{$pc})',
+  'sp': 'screen and (max-width: #{$sp})'
+);
+
+@mixin mq($size) {
+    @media #{map-get($breakpoints, $size)} {
+      @content;
+    }
+  }
+```
+読み込む
+```
+[xxx.module.scss]
+// インポート
+@import 'variables';
+
+    .logo {
+        max-width: 200px;
+        width: 100%;
+        @include mq(sp) {
+            width: 100%;
+            max-width: 100px !important;
+        }
+    }  
+```
+
+インポートは相対パスで書くのは手間のため、  
+next.config.jsのsassOptionsをいじって対応。以下のようにstylesディレクトリをincludePathsに追加する。
+```
+module.exports = {
+  sassOptions: {
+    includePaths: [path.join(__dirname, 'styles')]
+  },
+  experimental: {
+    optimizeFonts: true,
+  }
+};
+```
+
+
+
+
+## layout.js
+すべてのページで共有されるレイアウトコンポーネント
+内部にcomponents、layout.js次の内容で呼び出されるファイルを作成します。
+  
+書き方1  
+```
+import Header from './Header'
+
+ const layoutStyle = {
+     margin: 20,
+     padding: 20,
+     border: '1px solid #DDD'
+   }
+
+const Layout = (props) => (
+    <>
+      <Header />
+      <section>
+      //親からデータを引き継ぐ
+      {props.children}
+        </section>
+      
+    </>
+  )
+  
+  export default Layout
+```
+書き方2
+```
+import Head from 'next/head';
+import Header from './Header';
+import Image from 'next/image';
+import Link from 'next/link';
+
+//関数コンポーネント<Layout></Layout>で挟んだ部分がchildrenの部分に入るから、ページがレイアウトでラッピングされる。
+export default function Layout({ children, home }) {
+    return (
+        <>
+        <Head>
+            <link rel="icon" href="/favicon.ico" />
+        </Head>
+        <Header />
+        //home ? () : ()  条件分岐で「A」がtrueの場合
+        //<Layout home>がある場合がtrue　→　 <h1>dddd</h1>
+        //<Layout home>がばい場合がfalse　→　 <h2>ssss</h2>
+        {home ? (
+            <h1>dddd</h1>
+
+        ) : (
+
+            <h2>sss</h2>
+
+        )}
+        //<Layout></Layout>の中身を受け取る
+        <div>{children}</div>
+        </>
+    )
+}
+````
+
+
 
 
 

@@ -1,16 +1,4 @@
-$pc: 1024px; // PC
-$sp: 768px;  // スマホ
-
-@mixin pc {
-  @media (max-width: ($pc)) {
-    @content;
-  }
-}
-@mixin sp {
-  @media (max-width: ($sp)) {
-    @content;
-  }
-}
+@import 'variables';
 
 .header {
     display: flex;
@@ -21,14 +9,11 @@ $sp: 768px;  // スマホ
     z-index: 50;
     position: fixed;
     margin-top:20px;
-    @include pc {
-        position: initial;
-        padding: 0 20px;
-    }
+    top: 0;
     .logo {
         max-width: 200px;
         width: 100%;
-        @include sp {
+        @include mq(sp) {
             width: 100%;
             max-width: 100px !important;
         }
@@ -39,9 +24,6 @@ $sp: 768px;  // スマホ
         font-family: 'Lato', sans-serif;
         font-weight: 700;
         text-align: right;
-        @include pc {
-            display: none;
-        }
     }
     li {
         display: inline-block;
@@ -49,6 +31,34 @@ $sp: 768px;  // スマホ
     }
 }
 
+
+// @include mq(sp) {
+//     .logo {
+//         width: 100%;
+//         max-width: 100px !important;
+//         // margin-top: 0.5em;
+//     }
+// }
+
+
+// @media (max-width: 768px) {
+//     .logo {
+//         width: 100%;
+//         max-width: 100px !important;
+//         // margin-top: 0.5em;
+//     }
+// }
+@media (max-width: 1024px) {
+    .header {
+        position: initial;
+        nav {
+            display: none;
+        }
+        button {
+            background-color: #fff;
+        }
+    }
+}
   
 .humburger {
     color: white;
@@ -90,7 +100,13 @@ $sp: 768px;  // スマホ
         z-index: 100;
     }
 }
+@media (min-width: 1024px) {  
+
+}
 @media (max-width: 1024px) {
+    .header {
+        padding: 0 20px;
+    }
     .container {
         margin: 0 0 0 auto;
         .humburger {
@@ -189,15 +205,6 @@ $sp: 768px;  // スマホ
     z-index: 1;
     transition: .3s;
     cursor: pointer;
-    @include sp {
-        margin: 10px auto;
-        width: 80%;
-        display: block;
-        padding: 10px 0;
-        background: #222324;
-        border: 1px solid #fff;
-        color: #fff;
-    }
     &:before {
       content: "";
       width: 100%;

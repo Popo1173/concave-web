@@ -1,0 +1,13 @@
+$pc: 1024px; // PC
+$sp: 768px;  // スマホ
+
+$breakpoints: (
+  'pc': 'screen and (max-width: #{$pc})',
+  'sp': 'screen and (max-width: #{$sp})'
+);
+
+@mixin mq($size) {
+    @media #{map-get($breakpoints, $size)} {
+      @content;
+    }
+  }
