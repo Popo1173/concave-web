@@ -1,3 +1,19 @@
+@import 'variables';
+
 .wrapper {
-    margin-top: 100px;
+    margin-top: 115px;
+    @include mq(pc) {
+        margin-top: 20px;
+    }
+    @include mq(sp) {
+        margin-top: 20px;
+    }
+}
+.icatchVisual {
+    
+        padding-left: 30px;
+    
+    @include mq(sp_min) {
+        padding-left: 0;
+    }
 }

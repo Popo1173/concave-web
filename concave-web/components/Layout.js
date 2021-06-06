@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Header from './Header';
 import Styles from '../styles/layout.module.scss'
+import homeStyles from '../styles/Home.module.scss'
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -12,16 +13,24 @@ export default function Layout({ children, home }) {
             <link rel="icon" href="/favicon.ico" />
         </Head>
         <Header />
-        {/* {home ? (
-           <Image className="mainVisual"　src="/main_visual.png" alt="Picture of the author" width={1850} height={670} />
-        ) : (
-            <h2>sss</h2>
-        )} */}
+
 
 
         {/* /<Layout></Layout>の中身を受け取る/ */}
         <section className={Styles.wrapper}>
-            {children}
+            <div className={Styles.icatchVisual}>
+                {children}
+                {/* homeと下層の分岐 */}
+                {home ? (
+                    <p className={homeStyles.mainVisual}>
+                        <span>ssss</span>
+                    </p>
+                    ) : 
+                    (
+                    <h2>sss</h2>
+                    )
+                }
+            </div>
         </section>
         </>
     )

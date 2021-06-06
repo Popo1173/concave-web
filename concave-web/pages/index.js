@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Layout from '../components/Layout.js'
+import homeStyles from '../styles/Home.module.scss'
 import Image from 'next/image'
 
 export default function Home() {
@@ -12,8 +13,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout home>
-        <Image className="mainVisual"　src="/main_visual.png" alt="Picture of the author" width={1850} height={670} />
-      </Layout>
+       </Layout>
       <main>
         
         <h1></h1>

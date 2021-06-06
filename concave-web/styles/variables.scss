@@ -1,9 +1,13 @@
 $pc: 1024px; // PC
 $sp: 768px;  // スマホ
+$sp_min: 375px;  // スマホ
+$tab: 600px; 
 
 $breakpoints: (
   'pc': 'screen and (max-width: #{$pc})',
-  'sp': 'screen and (max-width: #{$sp})'
+  'sp': 'screen and (max-width: #{$sp})',
+  'tab': 'screen and (max-width: #{$tab})',
+  'sp_min': 'screen and (max-width: #{$sp_min})'
 );
 
 @mixin mq($size) {
