@@ -1,7 +1,10 @@
+
+//変数
 $pc: 1024px; // PC
 $sp: 768px;  // スマホ
 $sp_min: 375px;  // スマホ
 $tab: 600px; 
+$headingFont: 'Lato', sans-serif;
 
 $breakpoints: (
   'pc': 'screen and (max-width: #{$pc})',
@@ -10,8 +13,14 @@ $breakpoints: (
   'sp_min': 'screen and (max-width: #{$sp_min})'
 );
 
+//ブレイクポイント
 @mixin mq($size) {
     @media #{map-get($breakpoints, $size)} {
       @content;
     }
   }
+
+//HeadFont
+@mixin headingFont {
+  font-family: $headingFont;
+}

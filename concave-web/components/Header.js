@@ -45,7 +45,7 @@ return (
                     <span className={openMenu ? styles.open : undefined}></span>    
                 </div>
             </div>
-        </header>
+
         <div className={`${styles.drawerMenu} ${openMenu ? styles.open : undefined}`}>
             {/* humburger */}
             <div className={styles.close} onClick={() => menuFunction()}><span></span><span></span></div>
@@ -68,6 +68,7 @@ return (
             </ul>
             <button className={styles.CvBtn} type="submit">CONTACT</button>
         </div>
+        </header>
     </React.Fragment>
     )
 }

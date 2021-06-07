@@ -199,5 +199,18 @@ publicを省略できる.
 ```
 
 ## memo
-_app.jsに全て共通で利用する物を入れる
+### _app.jsに全て共通で利用する物を入れる
 
+### backgroundで横幅いっぱいに画像表示させる
+```
+.background {
+  width: 100%;
+  height: 0; /* 高さの両領域を確保する。paddingでも可*/
+  padding-top: calc(300 / 1000 * 100%); /* calc(画像高さ ÷ 画像横幅 × 100%) */
+  background: url(bg.jpg) center center / cover no-repeat;
+}
+```
+
+## vw,wh,calc考え方
+https://www.legit.co.jp/calc/12471
+https://jajaaan.co.jp/css/responsive-font-size/

@@ -1,7 +1,8 @@
 import Head from 'next/head';
 import Header from './Header';
-import Styles from '../styles/layout.module.scss'
-import homeStyles from '../styles/Home.module.scss'
+import Lead from './Lead';
+import Styles from '../styles/layout.module.scss';
+import homeStyles from '../styles/Home.module.scss';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -13,18 +14,19 @@ export default function Layout({ children, home }) {
             <link rel="icon" href="/favicon.ico" />
         </Head>
         <Header />
-
-
-
         {/* /<Layout></Layout>の中身を受け取る/ */}
         <section className={Styles.wrapper}>
             <div className={Styles.icatchVisual}>
                 {children}
                 {/* homeと下層の分岐 */}
                 {home ? (
-                    <p className={homeStyles.mainVisual}>
-                        <span>ssss</span>
-                    </p>
+                    <>
+                    <div className={Styles.mainVisual}>
+                        <h1 className={homeStyles.main_copy}>CATCH THE WAVE</h1>
+                        <p className={homeStyles.main_readText}>お客様のビジネスをWebで表現します。<br />ターゲットを捉えた分析を行い、Webサイトやシステムの立ち上げから<br />改善までをサポートします。</p>
+                    </div>
+                    <Lead />
+                    </>
                     ) : 
                     (
                     <h2>sss</h2>

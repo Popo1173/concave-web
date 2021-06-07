@@ -1,0 +1,9 @@
+.leadBlock {
+    display: flex;
+    &_text {
+        max-width: 800px;
+        width: 100%;
+        padding: 40px 20px;
+        background-color: #fff;
+    }
+}
