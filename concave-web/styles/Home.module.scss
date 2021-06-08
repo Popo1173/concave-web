@@ -131,7 +131,6 @@
     }
     &__newline {
       display: none;
-
     }
   }
 }
@@ -140,13 +139,13 @@
     position: absolute;
     top: calc(100vw/5);
     left: calc(100vw/23);
-    font-size: 18px;
-    // font-size: 1vw;
+    font-size: 1.25vw;
     // font-size: 1.2rem;
     color: #fff;
     @include mq(sp_min) {
       top: calc(100vw/1.3);
       font-size: 4vw;
+      line-height: 30px;
     }    
   }
 }

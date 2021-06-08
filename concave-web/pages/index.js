@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Layout from '../components/Layout.js'
 import homeStyles from '../styles/Home.module.scss'
+import Lead from '../components/Lead';
 import Image from 'next/image'
 
 export default function Home() {
@@ -13,11 +14,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout home>
-       </Layout>
-      <main>
-        
-        <h1></h1>
-      </main>
+      <Lead home />
+      </Layout>
+
 
       <footer>
 

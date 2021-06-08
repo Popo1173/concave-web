@@ -5,19 +5,17 @@
     align-items: center;
     width: 100%;
     height: auto;
-    // padding: 0 40px;
     z-index: 50;
     position: fixed;
-    padding-top:20px;
+    padding:20px 50px;
     top: 0;
     background-color: #fff;
     @include mq(pc) {
         position: initial;
-        // padding: 0 20px;
     }
-    // @include mq(tab) {
-    //     padding: 0 20px;
-    // }
+    @include mq(sp_min) {
+        padding: 20px 0 0 0 ;
+    }
     
     .logo {
         max-width: 200px;

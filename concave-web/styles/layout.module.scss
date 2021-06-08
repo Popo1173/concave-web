@@ -2,7 +2,7 @@
 
 .wrapper {
     margin-top: 115px;
-    overflow-x: hidden;
+    // overflow-x: hidden;
     @include mq(pc) {
         margin-top: 20px;
     }
@@ -11,10 +11,20 @@
     }
 }
 
+.inner {
+    width: 100%;
+    display: block;
+    padding: 0 50px;
+    position: relative;
+    @include mq(sp_min) {
+        padding: 0 25px;
+    }    
+}
+
 
 //mainVisual
 .icatchVisual {
-    padding-left: 70px;
+    padding-left: 50px;
     @include mq(sp_min) {
         padding-left: 0;
     }
@@ -22,8 +32,10 @@
 //home
 .mainVisual {
     position: relative;
-    width: 100vw;
-    height: 0;
+    width: calc(100% + 50px);
+    height: calc(100vh - 670px);
+    // width: 100vw;
+    // height: 0;
     padding-top: calc(670 / 1850 * 100%); /* calc(画像高さ ÷ 画像横幅 × 100%) */
     background: url("../public/images/main_visual.png") center center / cover no-repeat;
   @include mq(sp_min){

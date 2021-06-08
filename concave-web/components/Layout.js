@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import Header from './Header';
-import Lead from './Lead';
 import Styles from '../styles/layout.module.scss';
 import homeStyles from '../styles/Home.module.scss';
 import Image from 'next/image';
@@ -17,15 +16,15 @@ export default function Layout({ children, home }) {
         {/* /<Layout></Layout>の中身を受け取る/ */}
         <section className={Styles.wrapper}>
             <div className={Styles.icatchVisual}>
-                {children}
+               
                 {/* homeと下層の分岐 */}
                 {home ? (
                     <>
                     <div className={Styles.mainVisual}>
                         <h1 className={homeStyles.main_copy}>CATCH THE WAVE</h1>
-                        <p className={homeStyles.main_readText}>お客様のビジネスをWebで表現します。<br />ターゲットを捉えた分析を行い、Webサイトやシステムの立ち上げから<br />改善までをサポートします。</p>
+                        <p className={homeStyles.main_readText}>お客様のビジネスをWebで表現します。<br />ターゲットを捉えた分析を行い、Webサイトやシステムの立ち上げから改善までをサポートします。</p>
                     </div>
-                    <Lead />
+                  
                     </>
                     ) : 
                     (
@@ -33,6 +32,7 @@ export default function Layout({ children, home }) {
                     )
                 }
             </div>
+            <main className={Styles.inner}>{children}</main>
         </section>
         </>
     )
