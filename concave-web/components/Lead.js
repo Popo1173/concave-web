@@ -16,13 +16,13 @@ export default function Lead({home}) {
             <section className={Styles.leadBlock}>
                 <dl>
                     <dt className={Styles.leadBlock_text}>
-                        <h2>戦略立案からクリエティブとテクノロジーでWEBサイト、システムを開発をします。</h2>
+                        <h2>戦略立案からクリエティブとテクノロジーで<br />WEBサイト、システムを開発をします。</h2>
                         <ul>
                             {homedatas.map((data) => {
                                 return <li>{data.text}</li>;
                             })}
                         </ul>
-                        <div className="button"><Link  href="/">About Us</Link></div>
+                        <div className="button"><Link  href="/">ABOUT US</Link></div>
                     </dt>
                     <dd className={Styles.leadBlock_img}></dd>
                 </dl>
