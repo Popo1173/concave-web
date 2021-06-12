@@ -3,6 +3,10 @@ import Link from 'next/link'
 import Styles from '../styles/lead.module.scss';
 import Image from 'next/image';
 
+
+
+
+
 export default function Lead({home}) {
     //home リード文
     var homedatas = [
@@ -13,10 +17,10 @@ export default function Lead({home}) {
 
     return(
         <>
-            <section className={Styles.leadBlock}>
-                <dl>
+            <section>
+                <dl className={Styles.leadBlock}>
                     <dt className={Styles.leadBlock_text}>
-                        <h2>戦略立案からクリエティブとテクノロジーで<br />WEBサイト、システムを開発をします。</h2>
+                        <h2>戦略立案からクリエティブとテクノロジーで、WEBサイト・システムを開発をします。</h2>
                         <ul>
                             {homedatas.map((data) => {
                                 return <li>{data.text}</li>;

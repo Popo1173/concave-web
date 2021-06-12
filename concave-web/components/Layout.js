@@ -32,7 +32,7 @@ export default function Layout({ children, home }) {
                     )
                 }
             </div>
-            <main className={Styles.inner}>{children}</main>
+            <section className={Styles.inner}>{children}</section>
         </section>
         </>
     )

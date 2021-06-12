@@ -2,7 +2,7 @@ import React from "react";
 import App, { Container } from "next/app";
 import 'modern-css-reset/dist/reset.min.css'
 import '../styles/globals.scss'
-import '../styles/parts.modules.scss'
+import '../styles/parts.scss'
 
 // function MyApp({ Component, pageProps }) {
 //   return <Component {...pageProps} />

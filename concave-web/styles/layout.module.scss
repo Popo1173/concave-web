@@ -2,6 +2,7 @@
 
 .wrapper {
     margin-top: 115px;
+    font-size: 1.25vw;
     // overflow-x: hidden;
     @include mq(pc) {
         margin-top: 20px;
@@ -9,15 +10,18 @@
     @include mq(sp) {
         margin-top: 20px;
     }
+    @include mq(sp_min) {
+        font-size: 3.5vw;
+    }    
 }
 
 .inner {
     width: 100%;
     display: block;
     padding: 0 50px;
-    position: relative;
+    // position: relative;
     @include mq(sp_min) {
-        padding: 0 25px;
+        padding: 0 20px;
     }    
 }
 
