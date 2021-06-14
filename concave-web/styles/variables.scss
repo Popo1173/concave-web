@@ -10,7 +10,7 @@ $breakpoints: (
   'pc': 'screen and (max-width: #{$pc})',
   'sp': 'screen and (max-width: #{$sp})',
   'tab': 'screen and (max-width: #{$tab})',
-  'sp_min': 'screen and (max-width: #{$sp_min})'
+  'sp_min': 'screen and (max-width: #{$sp_min}) and (min-width: 320px)'
 );
 
 //ブレイクポイント

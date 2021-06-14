@@ -180,9 +180,27 @@ export default function Layout({ children, home }) {
 }
 ````
 
+## リストのkeyについて
+keyは再描画の際の描画処理の無駄を最小限にとどめてパフォーマンスが低下することにあります。　　
+PropsやStateをコントロールすれば、実際の表示要素の差分を再描画する機能がライブラリとして備わっています。　　
+keyは再描画の際の描画処理の無駄を最小限にとどめてパフォーマンスが低下することにあります。　　
+これだと「Warning: Each child in a list should have a unique “key” prop」エラーになる。　　
+```
+function Lists () {
+            const animals = ['cat', 'dog', 'bird']
+            let animalsLists = animals.map((animal) => {
+            →　key設定する：　let animalsList = animals.map((animal, index)) 配列indexを引数にする
+                return <List value={animal} />
+                →　key設定する：　return <List key={index} value={animal} />
+            })
 
-
-
+            return (
+                <ul>
+                    {animalsLists}
+                </ul>
+            )
+}
+```
 
 
 ## バーガー

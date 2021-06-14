@@ -1,24 +1,40 @@
 @import 'variables';
 
+
+.leadBlock {
+    &_wapper {
+        @include mq(sp_min) {
+            padding: 20px;
+            height: calc( 100vw / 0.78);
+        }
+    }
+}
+
 .leadBlock {
     position: relative;
     height: calc(100vw / 1.7);
-    // height: 100vh;
-    // min-height: calc(100vh / 2);
+    @include mq(sp) {
+        top: calc(100vw / 20);
+        margin: 10%;
+    }
+    @include mq(sp_min) {
+        top: calc(100vw / 6);
+        margin: 0;
+    }
     &_text {
         position: absolute;
         top: calc(100vw/-20);
-        left: calc(100vw/10);
+        left: calc(100vw/13);
         z-index: 10;
-        max-width: 800px;
-        width: 50%;
+        width: 60%;
         padding: 8% 5%;
         background-color: #fff;
         box-shadow: 0 0 10px gray;
-        @include mq(sp_min) {
+        @include mq(sp) {
             top: calc(100vw/-5);
             left: 0;
             width: 100%;
+            padding: 50px 20px;
         }
         h2 {
             font-size: 1.5vw;
@@ -32,8 +48,10 @@
             padding: 0;
         }
         li {
-            // font-size: 1.4vw;
             margin-bottom: 5%;
+            @include mq(sp) {
+                margin-bottom: 5%;
+            }
             
         }
     }
@@ -45,7 +63,7 @@
         height: 0;
         padding-top: calc(540 / 1850 * 100%); /* calc(画像高さ ÷ 画像横幅 × 100%) */
         background: url("../public/images/home_pic_about.png")  center center/cover no-repeat;
-        @include mq(sp_min) {
+        @include mq(sp) {
             display: none;
         }
     }

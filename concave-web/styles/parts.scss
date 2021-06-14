@@ -10,15 +10,20 @@
       font-size: 30px;
       margin-left: -50px;
       @include headingFont;
-      letter-spacing: 10px;
+      letter-spacing: 5px;
       @include mq(sp_min) {
         margin: 0;
+        height: 250px;
       }
       span {
         position: relative;
-        top: 15%;
+        top: 10%;
         color: #fff;
         font-size: 2vw;
+        @include mq(sp_min) {
+          top: 20%;
+          font-size: 5vw;
+        }
       }
       &:before {
         content: '';
@@ -40,39 +45,89 @@
   }
 }
 
-//白背景
+.secondBlock {
+  &_wapper {
+    @include mq(sp_min) {
+      margin-top: 100px;
+    }
+  }
+}
+
+//白背景 3flex
 .box {
   &_background {
     &__whtite {
       position: relative;
       top: -350px;
-      height: 500px;
-
       margin-right: 50px;
-      padding: 30px;
+      padding: calc(100vw /10) 30px 50px;
       box-shadow: 0 0 10px grey;
       background-color: #fff;
+      @include mq(sp) {
+        margin-left: 50px;
+      }
+      @include mq(sp_min) {
+        display: block;
+        top: -100px;
+        margin: 0 20px;
+      }
+      ul {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom: calc(100vw /15);
+        @include mq(sp_min) {
+          display: block;
+        }
+        li {
+          width: 32%;
+          padding: 0 10px;
+          @include mq(sp_min) {
+            width: 100% ;
+            margin-bottom: 50px;
+            padding: 0;
+          }
+          h3 {
+            margin: 15px 0;
+            @include headingFont;
+            font-size: 1.5vw;
+            letter-spacing: 5px;
+            text-align: center;
+            line-height: normal;
+            @include mq(sp_min) {
+              font-size: 4vw;
+            }
+          }
+        }
+      }
     }
   }
 }
 
+
 //ボタン
+.center {
+  margin: 0 auto;
+}
 .button {
-    width: 50%;
-    padding: 15px 40px;
-    text-align: center;
-    font-weight: normal;
-    border: 1px solid #333;
-    background: #fff;
-    font-size:1.4vw;
-    background: transparent;
+    width: 100%;
+    max-width: 300px;
     position: relative;
     z-index: 1;
+    padding: 25px 40px;
+    border: 1px solid #333;
+    background: #fff;
+    font-size:1.25vw;
+    font-weight: 700;
+    text-align: center;
+    background: transparent;
     transition: .3s;
     cursor: pointer;
+    letter-spacing: 5px;
     @include headingFont;
     @include mq(sp_min) {
         width: 100%;
+        font-size:3.5vw;
     }
     &:before {
         content: "";
