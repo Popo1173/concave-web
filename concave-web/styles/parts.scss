@@ -39,6 +39,12 @@
     }
   }
 }
+.box {
+  &_news {
+      margin-left: 50px;
+      margin-right: 0;
+  }
+}
 .fade{
   &:before {
   width: 100%;
@@ -114,7 +120,8 @@
     max-width: 300px;
     position: relative;
     z-index: 1;
-    padding: 25px 40px;
+    // padding: 25px 40px;
+    padding: 25px;
     border: 1px solid #333;
     background: #fff;
     font-size:1.25vw;

@@ -50,6 +50,12 @@ export default function Home() {
           <div className="button center"><Link  href="/">OUR  SERVICE </Link></div>
           </div>
         </section>
+        <section className="secondBlock_wapper">
+        <div className="box_background__black box_news">
+          <span>OUR SERVICE</span>
+        </div>
+
+        </section>
       </Layout>
 
 

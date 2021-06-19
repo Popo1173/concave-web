@@ -4,11 +4,11 @@
     margin-top: 80px;
     font-size: 1.25vw;
     // overflow-x: hidden;
-    @include mq(pc) {
-        margin-top: 0px;
-    }
+    // @include mq(pc) {
+    //     margin-top: 0px;
+    // }
     @include mq(sp) {
-        margin-top: 0px;
+        margin-top: 70px;
     }
     @include mq(sp_min) {
         margin-top: 20px;

@@ -1,5 +1,9 @@
 @import 'variables';
 
+
+.title { color: red; }
+.title.is-blue { color: blue; }
+
 .header {
     display: flex;
     align-items: center;
@@ -10,11 +14,11 @@
     padding:20px 50px;
     top: 0;
     background-color: #fff;
-    @include mq(pc) {
-        position: initial;
-    }
+    // @include mq(pc) {
+    //     position: initial;
+    // }
     @include mq(sp_min) {
-        padding: 20px 0 0 0 ;
+        padding: 15px 0 ;
     }
     
     .logo {
@@ -46,6 +50,15 @@
         margin-right: 3%;
     }
 }
+.fix {
+    position: fixed;
+top: 0;
+left: 0;
+}
+// .transform{
+//     background: rgba(255,255,255,0.9);
+//     padding: 20px;
+// }
   
 .humburger {
     color: white;
@@ -84,6 +97,7 @@
     height: 0;
     opacity: 0;
     z-index: -100;
+    left: 0;
     &.open {
         height: 100vh;
         opacity: 1;
@@ -174,7 +188,7 @@
     @include mq(pc) {        
         width: 80%;
         display: block;
-        margin: 20% auto;
+        margin: 10% auto;
         padding: 20px;
         color: #fff;
         border: 1px solid #fff;
