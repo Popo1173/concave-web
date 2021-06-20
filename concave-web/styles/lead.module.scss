@@ -5,14 +5,14 @@
     &_wapper {
         @include mq(sp_min) {
             padding: 20px;
-            height: calc( 100vw / 0.78);
+            // height: calc( 100vw / 0.78);
         }
     }
 }
 
 .leadBlock {
     position: relative;
-    height: calc(100vw / 1.7);
+    height: calc(100vw / 1.6);
     @include mq(sp) {
         top: calc(100vw / 20);
         margin: 10%;
