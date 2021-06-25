@@ -4,7 +4,7 @@
 .box {
   &_background {
     &__black {
-      height: 500px;
+      // height: 500px;
       text-align: center;
       position: relative;
       font-size: 30px;
@@ -17,7 +17,7 @@
       }
       span {
         position: relative;
-        top: 10%;
+        top: calc(100vw /25);
         color: #fff;
         font-size: 2vw;
         @include mq(sp_min) {
@@ -32,7 +32,7 @@
         top: 0;
         left: 0;
         width: 0;
-        height: 100%;
+        height: calc(100vh - 300px);
         background: #000;
         transition: 0.5s;
       }
@@ -54,6 +54,7 @@
 
 .secondBlock {
   &_wapper {
+    // height: calc(100vw / 1.63);
     @include mq(sp_min) {
       margin-top: 100px;
     }
@@ -65,7 +66,7 @@
   &_background {
     &__whtite {
       position: relative;
-      top: -350px;
+      margin-top: 95px;
       margin-right: 50px;
       padding: calc(100vw /10) 30px 50px;
       box-shadow: 0 0 10px grey;

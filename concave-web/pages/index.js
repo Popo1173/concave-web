@@ -51,12 +51,12 @@ export default function Home() {
           </div>
         </section>
       
-      {/* <section className="secondBlock_wapper">
+      <section className="secondBlock_wapper">
         <div className="box_background__black box_news">
           <span>OUR SERVICE</span>
         </div>
 
-        </section> */}
+        </section>
         </Layout>
 
       <footer>

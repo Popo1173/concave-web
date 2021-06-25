@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Link from 'next/link'
 import Styles from '../styles/lead.module.scss';
 import Image from 'next/image';
+import image from 'next/image';
 
 export default function Lead({home}) {
     //home リード文
@@ -24,8 +25,10 @@ export default function Lead({home}) {
                         </ul>
                         <div className="button"><Link  href="/">ABOUT US</Link></div>
                     </dt>
-                    <dd className={Styles.leadBlock_img}></dd>
+                    {/* <dd className={Styles.leadBlock_img}></dd> */}
+                    <dd className={Styles.leadBlock_img}><Image src="/static/img/home_pic_about.png" width={825} height={540} alt="" /></dd>
                 </dl>
+                
             </section>
         </>
     )
