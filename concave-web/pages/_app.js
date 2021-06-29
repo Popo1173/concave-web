@@ -1,8 +1,11 @@
 import React from "react";
 import App, { Container } from "next/app";
-import 'modern-css-reset/dist/reset.min.css'
-import '../styles/globals.scss'
-import '../styles/parts.scss'
+// import 'modern-css-reset/dist/reset.min.css'
+import '../styles/globals.scss';
+import '../styles/parts.scss';
+//SwiperCSS
+import "swiper/swiper.min.css";
+import "swiper/components/pagination/pagination.min.css"
 
 // function MyApp({ Component, pageProps }) {
 //   return <Component {...pageProps} />

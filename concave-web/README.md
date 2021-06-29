@@ -230,6 +230,10 @@ publicを省略できる.
 }
 ```
 
+## スライダーコンポーネント
+→　[これつかった](https://swiperjs.com/swiper-api)
+
+
 ## vw,wh,calc考え方
 https://www.legit.co.jp/calc/12471
 https://jajaaan.co.jp/css/responsive-font-size/

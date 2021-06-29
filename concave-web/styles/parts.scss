@@ -1,6 +1,6 @@
 @import 'variables';
 
-//黒背景
+//スライド黒背景
 .box {
   &_background {
     &__black {
@@ -18,11 +18,8 @@
       span {
         position: relative;
         top: calc(100vw /25);
-        color: #fff;
-        font-size: 2vw;
         @include mq(sp_min) {
           top: 20%;
-          font-size: 5vw;
         }
       }
       &:before {
@@ -97,17 +94,41 @@
           }
           h3 {
             margin: 15px 0;
-            @include headingFont;
-            font-size: 1.5vw;
-            letter-spacing: 5px;
             text-align: center;
             line-height: normal;
-            @include mq(sp_min) {
-              font-size: 4vw;
-            }
           }
         }
       }
+    }
+  }
+}
+
+.box {
+  &_backgroundStatic {
+    &__black {
+      width: 107%;
+      background: #000;
+      padding: 30px;
+    }
+  }
+}
+
+//HeadTitle
+.Heading {
+  &_h2 {
+    @include headingFont;
+    font-size: 2vw;
+    color: #fff;
+    @include mq(sp_min) {
+      font-size: 5vw;
+    }
+  }
+  &_h3 {
+    @include headingFont;
+    font-size: 1.5vw;
+    letter-spacing: 5px;
+    @include mq(sp_min) {
+      font-size: 4vw;
     }
   }
 }

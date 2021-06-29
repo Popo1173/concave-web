@@ -26,7 +26,7 @@ export default function Lead({home}) {
                         <div className="button"><Link  href="/">ABOUT US</Link></div>
                     </dt>
                     {/* <dd className={Styles.leadBlock_img}></dd> */}
-                    <dd className={Styles.leadBlock_img}><Image src="/static/img/home_pic_about.png" width={825} height={540} alt="" /></dd>
+                    <dd className={Styles.leadBlock_img}><Image src="/static/img/home_pic_about.png" width={825} height={540} alt="About Us" /></dd>
                 </dl>
                 
             </section>
