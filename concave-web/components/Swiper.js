@@ -3,8 +3,7 @@ import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Image from 'next/image';
 
-import "swiper/swiper.min.css";
-import "swiper/components/pagination/pagination.min.css"
+import Styles from '../styles/swiper.module.scss';
 
 
 // import Swiper core and required modules
@@ -19,10 +18,8 @@ import SwiperCore, {
   export default function Swipe() {
     
     return (
-      <>
-      <Swiper slidesPerView={3} spaceBetween={30} pagination={{
-    "clickable": true
-  }} className="mySwiper">
+      <section className={Styles.block_slide}>
+    <Swiper slidesPerView={3} spaceBetween={30} pagination={{"clickable": true}} className="mySwiper">
     <SwiperSlide><Image src="/static/img/work/work_pic01.png" width={574} height={332} alt="" />dddd</SwiperSlide>
     <SwiperSlide><Image src="/static/img/work/work_pic01.png" width={574} height={332} alt="" /></SwiperSlide>
     <SwiperSlide><Image src="/static/img/work/work_pic01.png" width={574} height={332} alt="" /></SwiperSlide>
@@ -30,7 +27,7 @@ import SwiperCore, {
     <SwiperSlide><Image src="/static/img/work/work_pic01.png" width={574} height={332} alt="" /></SwiperSlide>
     <SwiperSlide><Image src="/static/img/work/work_pic01.png" width={574} height={332} alt="" /></SwiperSlide>    
     </Swiper>
-      </>
+      </section>
     )
   }
 
