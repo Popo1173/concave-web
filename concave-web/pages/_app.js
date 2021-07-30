@@ -1,11 +1,15 @@
 import React from "react";
 import App, { Container } from "next/app";
-// import 'modern-css-reset/dist/reset.min.css'
+import 'modern-css-reset/dist/reset.min.css'
 import '../styles/globals.scss';
 import '../styles/parts.scss';
+
 //SwiperCSS
-import "swiper/swiper.min.css";
-import "swiper/components/pagination/pagination.min.css"
+import "swiper/swiper.scss";
+import "swiper/components/navigation/navigation.scss";
+import "swiper/components/pagination/pagination.scss";
+
+
 
 // function MyApp({ Component, pageProps }) {
 //   return <Component {...pageProps} />

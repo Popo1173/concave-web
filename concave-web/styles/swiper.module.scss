@@ -1,14 +1,23 @@
-.test {
-    img {
-    width: 100%;
-    }
-}
-
 .block {
     &_slide {
         padding: 20px 0 20px 0;
         img {
             width: 100%;
         }
+        &.swiper-slide {
+            width: 40% !important;
+        }
     }
 }
+.swiper-wrapper {
+    width: 40% !important;
+}
+
+.read {
+    &_text {
+        display: block;
+        color: #fff;
+    }
+}
+.swiper-button-next { color: red; }
+

@@ -232,7 +232,7 @@ publicを省略できる.
 
 ## スライダーコンポーネント
 →　[これつかった](https://swiperjs.com/swiper-api)
-
+https://codesandbox.io/s/9dzog
 
 ## vw,wh,calc考え方
 https://www.legit.co.jp/calc/12471
