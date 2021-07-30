@@ -233,6 +233,7 @@ publicを省略できる.
 ## スライダーコンポーネント
 →　[これつかった](https://swiperjs.com/swiper-api)
 https://codesandbox.io/s/9dzog
+https://blog.mismith.me/entry/2020/12/31/144154
 
 ## vw,wh,calc考え方
 https://www.legit.co.jp/calc/12471

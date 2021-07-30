@@ -1,13 +1,14 @@
 import React from "react";
 import App, { Container } from "next/app";
 import 'modern-css-reset/dist/reset.min.css'
-import '../styles/globals.scss';
-import '../styles/parts.scss';
 
 //SwiperCSS
 import "swiper/swiper.scss";
 import "swiper/components/navigation/navigation.scss";
 import "swiper/components/pagination/pagination.scss";
+
+import '../styles/globals.scss';
+import '../styles/parts.scss';
 
 
 

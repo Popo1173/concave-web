@@ -51,6 +51,7 @@
 
 .secondBlock {
   &_wapper {
+    margin-top: 100px;
     // height: calc(100vw / 1.63);
     @include mq(sp_min) {
       margin-top: 100px;

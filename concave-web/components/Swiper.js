@@ -5,6 +5,10 @@ import Image from 'next/image';
 
 import Styles from '../styles/swiper.module.scss';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faRss } from '@fortawesome/free-solid-svg-icons'
+
+
 // import Swiper core and required modules
 import SwiperCore, {Pagination, Navigation} from 'swiper/core';
   
@@ -15,17 +19,13 @@ import SwiperCore, {Pagination, Navigation} from 'swiper/core';
   export default function Swipe() {
     
     return (
-      // <section className={Styles.block_slide}>
+      // 
       <>
-            <code className="code">
-        {`
-          .swiper-button-next { color: red; }
-        `}
-      </code>
+      
     <Swiper 
       slidesPerView={3} 
       spaceBetween={30} 
-      pagination={{"clickable": true}} 
+      // pagination={{"clickable": true}} 
       navigation
       className="mySwiper"
     >
@@ -34,8 +34,9 @@ import SwiperCore, {Pagination, Navigation} from 'swiper/core';
     <SwiperSlide><Image src="/static/img/work/work_pic01.png" width={574} height={332} alt="" /><span className={Styles.read_text}>準備中</span></SwiperSlide>
     <SwiperSlide><Image src="/static/img/work/work_pic01.png" width={574} height={332} alt="" /><span className={Styles.read_text}>準備中</span></SwiperSlide>
     </Swiper>
+    
     </>
-      // </section>
+      
     )
   }
 
