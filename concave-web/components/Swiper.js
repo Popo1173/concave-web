@@ -21,20 +21,33 @@ import SwiperCore, {Pagination, Navigation} from 'swiper/core';
     return (
       // 
       <>
-      
+      <section className={Styles.block_slide}>
     <Swiper 
       slidesPerView={3} 
       spaceBetween={30} 
       // pagination={{"clickable": true}} 
       navigation
       className="mySwiper"
+
+      breakpoints={{
+        // when window width is >= 640px
+        640: {
+          width: 640,
+          slidesPerView: 1,
+        },
+        // when window width is >= 768px
+        768: {
+          width: 768,
+          slidesPerView: 2,
+        },
+      }}
     >
     <SwiperSlide><Image src="/static/img/work/work_pic01.png" width={574} height={332} alt="" /><span className={Styles.read_text}>準備中</span></SwiperSlide>
     <SwiperSlide><Image src="/static/img/work/work_pic01.png" width={574} height={332} alt="" /><span className={Styles.read_text}>準備中</span></SwiperSlide>
     <SwiperSlide><Image src="/static/img/work/work_pic01.png" width={574} height={332} alt="" /><span className={Styles.read_text}>準備中</span></SwiperSlide>
     <SwiperSlide><Image src="/static/img/work/work_pic01.png" width={574} height={332} alt="" /><span className={Styles.read_text}>準備中</span></SwiperSlide>
     </Swiper>
-    
+    </section>
     </>
       
     )

@@ -119,6 +119,7 @@
   &_h2 {
     @include headingFont;
     font-size: 2vw;
+    letter-spacing: 5px;
     color: #fff;
     @include mq(sp_min) {
       font-size: 5vw;
